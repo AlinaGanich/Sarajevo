@@ -1,0 +1,43 @@
+@logo-ft-size: 21px;
+@logo-color          : #ffffff;
+@link-decoration     : none;
+@nav-color           : @logo-color;
+@nav-ft-size         : 12px;
+@ft-weight           : 400;
+@flex                : flex;
+@slogan-ft-size      : 18px;
+@brand-color         : #4c76ff;
+@subtitle-ft-size    : 48px;
+@section-title-color : #282528;
+@banner-ft-size      : @logo-ft-size*3;
+@url-img             : url('/img/');
+@url-icon            : url('/icon/');
+/*!!!! font-family (thin/bold)*/
+
+
+.logo-title() {
+    font-size  : @banner-ft-size;
+    color      : @logo-color;
+    font-weight: @ft-weight*2;
+}
+
+.networks-icons() {
+    width           : 20px;
+    height          : 16px;
+    background-color: #ffffff;
+    opacity         : 0.3;
+}
+
+.networks-icons-hover() {
+    color: @logo-color;
+}
+
+.hero-hr() {
+    content         : "";
+    display         : block;
+    width           : 28px;
+    height          : 1px;
+    background-color: @brand-color;
+}
+
+//наследование???

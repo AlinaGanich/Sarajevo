@@ -10,17 +10,25 @@ const sourcemaps = require('gulp-sourcemaps');
 const less = require('gulp-less');
 
 
-
+/*
+const cssFiles = [
+    './src/css/main.css',
+    './src/css/media.css'
+]
+*/
 const lessFiles = [
     './src/less/main.less',
+    './src/less/_variables.less',
     './src/less/_banner.less',
+    './src/less/_example.less',
     './src/less/media.less'
 ]
+
 const jsFiles = [
         './src/js/lib.js',
         './src/js/main.js'
     ]
-    //Таск на стили CSS
+    //Таск на стили less
 function styles() {
     return gulp.src(lessFiles)
         .pipe(sourcemaps.init())
