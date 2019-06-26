@@ -20,7 +20,7 @@ const lessFiles = [
     './src/less/main.less',
     './src/less/_variables.less',
     './src/less/_banner.less',
-    './src/less/_example.less',
+    './src/less/_feature.less',
     './src/less/media.less'
 ]
 
