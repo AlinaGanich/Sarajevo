@@ -1,33 +1,42 @@
 @logo-ft-size: 21px;
-@logo-color          : #ffffff;
-@link-decoration     : none;
-@nav-color           : @logo-color;
-@ft-size             : 14px;
-@ft-weight           : 400;
-@ft-weight-thin      : 100;
-@ft-weight-bold      : bold;
-@flex                : flex;
-@slogan-ft-size      : 18px;
-@brand-color         : #4c76ff;
-@subtitle-ft-size    : 48px;
-@section-title-color : #282528;
-@banner-ft-size      : @logo-ft-size*3;
-@url-img             : url('/img/');
-@url-icon            : url('/icon/');
+@logo-color            : #ffffff;
+@link-decoration       : none;
+@nav-color             : @logo-color;
+@ft-size               : 14px;
+@ft-weight             : 400;
+@ft-weight-thin        : 100;
+@ft-weight-bold        : bold;
+@flex                  : flex;
+@slogan-ft-size        : 18px;
+@brand-color           : #4c76ff;
+@subtitle-ft-size      : 48px;
+@section-title-color   : #282528;
+@banner-ft-size        : @logo-ft-size*3;
+@url-img               : url('/img/');
+@url-icon              : url('/icon/');
+@color                 : @brand-color;
 //@brand-font-family   : 'Lato', sans-serif;
 //@content-font-family : 'Open Sans', sans-serif;
-@font-style : italic;
-@letter-spacing: .94px;
-@transition:   .15s linear;
+@font-style            : italic;
+@letter-spacing        : .94px;
+@transition            : .15s linear;
+@hr-color: #e3e5e6;
 
 
-.ft-size-color(@size, @color){
-    font-size: @size;
-    color: @color;
+.flex-dir-cont(@@flex, @dir, @cont) {
+    display        : @flex;
+    flex-direction : @dir;
+    justify-content: @cont;
 }
-.ft-size-color-weight(@size, @color, @weight){
+
+.ft-size-color(@size, @color) {
     font-size: @size;
-    color: @color;
+    color    : @color;
+}
+
+.ft-size-color-weight(@size, @color, @weight) {
+    font-size  : @size;
+    color      : @color;
     font-weight: @weight;
 }
 
@@ -39,26 +48,31 @@
 }
 
 .networks-icons() {
-    color: @logo-color;
-    opacity         : 0.3;
-    font-size      : @logo-ft-size;
+    color    : @logo-color;
+    opacity  : 0.3;
+    font-size: @logo-ft-size;
 }
 
 .networks-icons-hover() {
     color: @logo-color;
 }
 
-.hero-hr() {
-    content         : "";
-    display         : inline-block;
-    width           : 2rem;
-    height          : 1px;
-    background-color: @brand-color;
-   
-    margin: 5px 2rem;
+.hero-hr(@content: "", @display: inline-block, @width: 2rem, @height: 1px, @bg-color: @brand-color, @margin: .4rem 2rem ) {
+    content         : @content;
+    display         : @display;
+    width           : @width;
+    height          : @height;
+    background-color: @bg-color;
+    margin          : @margin;
+
 }
 
+.psevdo-hr(@content: "", @display: inline-block, @width: 5.6rem, @height: 1px, @bg-color: @hr-color, @margin: .4rem .9rem ) {
+    content         : @content;
+    display         : @display;
+    width           : @width;
+    height          : @height;
+    background-color: @bg-color;
+    margin          : @margin;
 
-
-
-
+}
