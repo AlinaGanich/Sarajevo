@@ -2,7 +2,7 @@
 @logo-color          : #ffffff;
 @link-decoration     : none;
 @nav-color           : @logo-color;
-@ft-size             : 12px;
+@ft-size             : 14px;
 @ft-weight           : 400;
 @ft-weight-thin      : 100;
 @ft-weight-bold      : bold;
@@ -17,10 +17,19 @@
 //@brand-font-family   : 'Lato', sans-serif;
 //@content-font-family : 'Open Sans', sans-serif;
 @font-style : italic;
+@letter-spacing: .94px;
+@transition:   .15s linear;
 
 
-
-/*!!!! font-family (thin/bold)*/
+.ft-size-color(@size, @color){
+    font-size: @size;
+    color: @color;
+}
+.ft-size-color-weight(@size, @color, @weight){
+    font-size: @size;
+    color: @color;
+    font-weight: @weight;
+}
 
 
 .logo-title() {
@@ -41,11 +50,14 @@
 
 .hero-hr() {
     content         : "";
-    display         : block;
+    display         : inline-block;
     width           : 2rem;
     height          : 1px;
     background-color: @brand-color;
+   
+    margin: 5px 2rem;
 }
+
 
 
 

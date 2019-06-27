@@ -1,19 +1,14 @@
 @import "_variables.less";
 
-/*header hover*/
-.header:hover {
-    background-color: #101636;
-    color           : @brand-color;
-    opacity         : .2;
+.wrapper__header {
+    background-color: rgba(73, 102, 202, .2);
+    ;
 
 
 }
 
-/*.header:hover .input__header {
- opacity: 1;
-}*/
 
-.wrapper__header {
+.wrapper__hero {
     margin          : 0;
     width           : 100%;
     height          : 1000px;
@@ -25,6 +20,7 @@
         padding-top: 2%;
         display    : @flex;
 
+
         .logo__link {
             display     : @flex;
             margin-right: 26rem;
@@ -35,9 +31,7 @@
                 font-size: @logo-ft-size;
             }
 
-            // Доделать
             .input__header {
-                opacity         : 1;
                 margin-left     : 32px;
                 border          : none;
                 border-left     : 1px solid @brand-color;
@@ -45,26 +39,14 @@
                 width           : 10rem;
                 height          : 1rem;
                 padding-left    : 1.1rem;
-                color           : @logo-color;
-                font-size       : @ft-size;
-                font-weight     : @ft-weight-thin;
+                .ft-size-color-weight( @ft-size, @logo-color, @ft-weight-thin);
+               opacity: .5;
+               font-style: @font-style;
+               letter-spacing: @letter-spacing;
             }
         }
     }
 }
-
-.main__title {
-   
-    text-align: center;
-    .logo-title();
-
-}
-
-.main__subtitle {
-    font-size: @subtitle-ft-size;
-    color    : @logo-color;
-}
-
 
 .nav {
     width          : 100%;
@@ -76,31 +58,34 @@
         text-decoration: @link-decoration;
         color          : @nav-color;
         font-size      : @ft-size;
-        font-weight    : @ft-weight-thin;
+        font-weight    : @ft-weight;
+        &:hover{
+            color: @brand-color;
+            transition: @transition;
+        }
     }
 }
 
+
 .hero {
-    margin-top: 20rem;
+    margin-top : 20rem;
     text-align : center;
     line-height: 1.5;
 
-    .main__subtitle {
+    .main__title {
+        margin-top: 17rem;
+        .logo-title();
 
-
-        font-size  : @subtitle-ft-size;
-        font-weight: @ft-weight-thin;
-
-        .creative {
-            color: @brand-color;
-        }
+    }
+.main__subtitle{
+    .ft-size-color-weight(@subtitle-ft-size, @logo-color, @ft-weight-thin );
+}
+    .creative {
+        .ft-size-color-weight(@subtitle-ft-size, @brand-color, @ft-weight-thin );
     }
 
     .main__slogan {
-        margin-top : 1rem;
-        color      : @logo-color;
-        font-size  : @slogan-ft-size;
-        font-weight: @ft-weight;
+        margin-top: 1rem;
 
         &:after {
             .hero-hr();
@@ -111,22 +96,24 @@
         }
     }
 
+    .main__slogan {  
+        .ft-size-color-weight(@slogan-ft-size, @logo-color, @ft-weight );
+    }
 
     .networks__icons {
-        width          : 7.2rem;
+        width          : 8rem;
         margin         : 0 auto;
         display        : flex;
         justify-content: space-between;
-        margin-top     : 11rem;
+        margin-top     : 10rem;
 
         .net__item {
             .networks-icons();
-        }
 
-        .net__item:hover {
-            opacity: 1;
+            &:hover {
+                opacity: 1;
+                transition: @transition;
+            }
         }
     }
 }
-
-// !!!!!!
