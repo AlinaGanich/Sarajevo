@@ -27,9 +27,9 @@
             align-items : baseline;
 
             .logo {
-                color    : @logo-color;
-                font-size: @logo-ft-size;
+                .hero-base-font(21px, 900);
             }
+
 
             .input__header {
                 margin-left     : 32px;
@@ -39,10 +39,12 @@
                 width           : 10rem;
                 height          : 1rem;
                 padding-left    : 1.1rem;
-                .ft-size-color-weight( @ft-size, @logo-color, @ft-weight-thin);
-               opacity: .5;
-               font-style: @font-style;
-               letter-spacing: @letter-spacing;
+                .hero-base-font();
+                font-family   : @brand-font-family;
+                opacity       : .5;
+                font-style    : @font-style;
+                letter-spacing: @letter-spacing;
+              
             }
         }
     }
@@ -56,14 +58,18 @@
 
     .nav__item {
         text-decoration: @link-decoration;
-        color          : @nav-color;
-        font-size      : @ft-size;
-        font-weight    : @ft-weight;
-        &:hover{
-            color: @brand-color;
+        .hero-base-font();
+        font-family: @brand-font-family;
+
+        &:hover {
+            color     : @brand-color;
             transition: @transition;
         }
     }
+}
+
+.point {
+    color: @brand-color;
 }
 
 
@@ -77,17 +83,22 @@
         .logo-title();
 
     }
-.main__subtitle{
-    .ft-size-color-weight(@subtitle-ft-size, @logo-color, @ft-weight-thin );
-}
+
+    .main__subtitle {
+        .hero-base-font(@subtitle-ft-size);
+        font-family: @brand-font-family;
+        opacity: .9;
+    }
+
     .creative {
-        .ft-size-color-weight(@subtitle-ft-size, @brand-color, @ft-weight-thin );
+        color: @brand-color;
     }
 
     .main__slogan {
         margin-top: 1rem;
 
-        &::after, &::before {
+        &::after,
+        &::before {
             .hero-hr();
         }
 
@@ -96,8 +107,10 @@
         }
     }
 
-    .main__slogan {  
-        .ft-size-color-weight(@slogan-ft-size, @logo-color, @ft-weight );
+    .main__slogan {
+        .hero-base-font(18px);
+        font-family: @brand-font-family;
+        opacity: .9;
     }
 
     .networks__icons {
@@ -111,7 +124,7 @@
             .networks-icons();
 
             &:hover {
-                opacity: 1;
+                opacity   : 1;
                 transition: @transition;
             }
         }
