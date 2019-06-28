@@ -14,6 +14,7 @@
     height          : 1000px;
     background-image: url('/img/bg_image_header.png');
     background-size : cover;
+    //margin-bottom: 5rem;
 
     .header {
         width      : 100%;
@@ -23,7 +24,7 @@
 
         .logo__link {
             display     : @flex;
-            margin-right: 26rem;
+           // margin-right: 26rem;
             align-items : baseline;
 
             .logo {
@@ -54,18 +55,21 @@
     width          : 100%;
     display        : @flex;
     align-items    : center;
-    justify-content: space-between;
+    justify-content: flex-end;
 
     .nav__item {
         text-decoration: @link-decoration;
         .hero-base-font();
         font-family: @brand-font-family;
+        padding-left: 1.8rem;
 
         &:hover {
             color     : @brand-color;
             transition: @transition;
         }
+        
     }
+    
 }
 
 .point {
@@ -102,9 +106,6 @@
             .hero-hr();
         }
 
-        &:before {
-            .hero-hr();
-        }
     }
 
     .main__slogan {
