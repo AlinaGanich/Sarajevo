@@ -1,39 +1,45 @@
 @import "_variables.less";
 
-.wrapper__first__group{
+.wrapper__first__part {
     background: #efefef;
 }
+
 .features {
-    
-    width  : 100%;
-    .flex-dir-cont(flex, row, space-between );
+
+    width: 100%;
+    .flex;
 
     &__item {
-        .flex-dir-cont(flex, row, space-between );
+        .flex;
         margin-right: 2rem;
-        
-        .features__icon{
-            padding-top: 1rem;
-        }
-        .features__content{
+
+        .features__content {
             margin-left: 1rem;
-            .features__title{
+
+            .features__title {
                 .cont-base-ft(17px, 600);
             }
-            .features__text{
+
+            .features__text {
                 .cont-base-ft();
             }
         }
+
         &:last-child {
             margin-right: 0;
         }
     }
 }
 
-.pages__title {
-    text-align: center;
-    margin-bottom: 4rem;
-   
+.features__icon {
+    padding-top: 1rem;
+}
+
+
+.pages__header {
+    text-align   : center;
+    margin-bottom: @padd-bott;
+
     .blocks__title {
         .content-title();
     }
@@ -45,6 +51,58 @@
     .empty__heart::after {
         .psevdo-hr();
     }
+}
 
+// Second Group
+.paragraph {
+    .paragraph;
+    .cont-base-ft(15px, @line-h:32px);
+}
+
+
+.second__features__item {
+    margin-top: 4rem;
+
+    .flex(@dir:column);
+
+    .features__cell {
+        .flex;
+
+        .features__content__cell {
+            margin-left   : 2.2rem;
+            padding-bottom: 1rem;
+            padding-right : .7rem;
+            .features__title__cell{ 
+                .cont-base-ft(15px, 700, @ft-2part );
+            }
+            .features__text__cell{
+                .cont-base-ft(13px, @ft-2part  );
+            }
+            
+        }
+
+        &:hover {
+            background: @bg-cell;
+            transition: @transition;
+            &:hover .icon__awesome{
+                color     : @cont-color;
+                transition: @transition;
+            }
+        }
+    }
+}
+
+.second__features__item--padding {
+    padding-top   : 3rem;
+    padding-bottom: 8rem;
+}
+
+.features__icon--padding {
+    padding-left: 1rem;
+}
+
+.icon__awesome {
+    .icons-ft();
+    
 }
 

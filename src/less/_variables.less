@@ -24,13 +24,29 @@ sans-serif;
 @txt-transform  : uppercase;
 @letter-spacing : .94px;
 @transition     : .15s linear;
-@hr-color       :  #c2c2c2;;
-@cont-color: #062033;
+@transition-link: .2s step-start;
+@border-radius  : .5rem;
+@hr-color       : #c2c2c2;
+;
+@cont-color   : #062033;
+@icons-ft-size: 30px;
+@icons-color  : #282528;
+@line-h       : 21px;
+@padd-bott    : 5rem;
+@bg-cell      : #fefce9;
+@ft-2part     : #282528;
+@ft-3part: #062033;
 
-.hero-base-font(@ft-size: 14px, @ft-weight: 400, @color: @logo-color) {
+.icons-ft (@ft-size: 30px, @color: #c1c0c1) {
+    font-size: @ft-size;
+    color    : @color;
+}
+
+.hero-base-font(@ft-size: 14px, @ft-weight: 400, @color: @logo-color, @ft-family: @brand-font-family) {
     font-size  : @ft-size;
     font-weight: @ft-weight;
     color      : @color;
+    font-family: @brand-font-family;
 }
 
 .cont-base-ft(@ft-size: 13px, @ft-weight: 400, @color: @cont-color, @line-h: 21px, @ft-family: @content-font-family) {
@@ -39,6 +55,12 @@ sans-serif;
     color      : @color;
     line-height: @line-h;
     font-family: @ft-family;
+}
+
+.flex(@@flex: flex, @dir: row, @cont: space-between) {
+    display        : @flex;
+    flex-direction : @dir;
+    justify-content: @cont;
 }
 
 .flex-dir-cont(@@flex, @dir, @cont) {
@@ -57,16 +79,6 @@ sans-serif;
     text-transform: @txt-transform;
 }
 
-/* Исчезают псевдоэлементы
-.section-margin-top(@margin-top:5rem){
-    margin-top: @margin-top;
-}
-
-.title-margin(@margin-top: 5rem, @margin-bottom: 5rem){
-    margin-top   : @margin-top;
-    margin-bottom: @margin-bottom;
-}
-*/
 
 .networks-icons() {
     color    : @logo-color;
@@ -95,5 +107,17 @@ sans-serif;
     height          : @height;
     background-color: @bg-color;
     margin          : @margin;
+}
 
+.paragraph(@width: 83%, @m-right: auto, @m-left: auto, @align: center) {
+    width       : @width;
+    margin-right: @m-right;
+    margin-left : @m-left;
+    text-align  : @align;
+}
+
+.width-margin(@width: 100%, @max-width: 1908px, @margin: 0 auto) {
+    width    : @width;
+    max-width: @max-width;
+    margin   : @margin;
 }

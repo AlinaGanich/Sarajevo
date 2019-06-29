@@ -21,6 +21,7 @@ const lessFiles = [
     './src/less/_variables.less',
     './src/less/_banner.less',
     './src/less/_feature.less',
+    './src/less/_thirdPart.less',
     './src/less/media.less'
 ]
 
