@@ -19,6 +19,7 @@
 
 .team__item {
     position: relative;
+   
 }
 
 .team__info {
@@ -35,6 +36,9 @@
 .team__item:hover .team__info {
     display: block;
   
+}
+.team__item:hover .sub__name{
+    color: @hover-ft-title;
 }
 
 
@@ -62,3 +66,12 @@
     margin-top: 1rem;
     text-align: center;
 }
+.sub__name{
+    .cont-base-ft(16px, 600);
+}
+.sub__prof{
+    .cont-base-ft(12px);
+}
+
+
+

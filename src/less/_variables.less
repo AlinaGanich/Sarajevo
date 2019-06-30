@@ -38,6 +38,8 @@ sans-serif;
 @ft-3part: #062033;
 @bg-first-part: #efefef;
 @bg-header: rgba(73, 102, 202, .2);
+@hover-ft-title: #22ba9c;
+@hover-bg-icons: #2cbda1;
 
 .icons-ft (@ft-size: 30px, @color: #c1c0c1) {
     font-size: @ft-size;
@@ -162,9 +164,18 @@ sans-serif;
 }
 .soc-icons(@padding: .56rem){
     padding: @padding;
+    display: inline-block;
+    width: 36px;
+    height: 35px;
     color: #ffffff;
     background: #000000;
     opacity: .3;
+    &:hover{
+        background: @hover-bg-icons;
+        opacity: 1;
+        color: @logo-color;
+        transition: @transition;
+    }
 }
 /*
 .Wrap(@_min-height, @_bg-image){
