@@ -20,20 +20,13 @@
 }
 
 .button__link {
-    padding: .5rem 1.25rem;
-
-    &:hover {
-        color        : @logo-color;
-        background   : @brand-color;
-        border-radius: .5rem;
-        transition   : @transition-link;
-    }
+  .button-link();
 }
 
 // GALLERY
 .gallery {
     .width-margin;
-    .flex-dir-cont(flex, column, flex-start);
+    .flex-dir-cont(column, flex-start);
 
     &__row {
         .flex(@cont:center);
@@ -47,19 +40,11 @@
     position: relative;
 }
 .gallery__info{
-    display: none;
-    position: absolute;
-    .width-margin(@max-width: 15rem);
-    
-    text-align: center;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
+    .info-img();
+    .txt-center();
 }
 .gallery__photo {
     background: @brand-color;
-   background-position: inherit;
     
 }
 .gallery__item:hover .gallery__img{

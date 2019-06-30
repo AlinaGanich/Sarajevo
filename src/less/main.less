@@ -1,5 +1,10 @@
+@import "_variables.less";
 * {
     box-sizing: border-box;
+}
+a{
+    cursor: pointer;
+    text-decoration: none;
 }
 
 .main-wrapper {
@@ -18,27 +23,11 @@
 }
 
 .container {
-    width: 1200px;
-    margin: 0 auto;
-    height: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
+    .container(0, 0);
 }
 .container__section {
-    width: 1200px;
-    margin: 0 auto;
-    padding-top: 5rem;
-    padding-bottom: 7rem;
-    height: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
+   .container(5rem, 7rem);
 }
 .container__section--padding {
-    width: 1200px;
-    margin: 0 auto;
-    padding-top: 5rem;
-    padding-bottom: 2.5rem;
-    height: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
+    .container(5rem, 2.5rem);
 }

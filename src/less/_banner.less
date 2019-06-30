@@ -1,9 +1,7 @@
 @import "_variables.less";
 
 .wrapper__header {
-    background-color: rgba(73, 102, 202, .2);
-    ;
-
+    background-color: @bg-header;
 
 }
 
@@ -11,10 +9,10 @@
 .wrapper__hero {
     margin          : 0;
     width           : 100%;
-   min-height          : 52rem;
+    min-height      : 52rem;
     background-image: url('/img/bg_image_header.png');
     background-size : cover;
-    
+
 
     .header {
         width      : 100%;
@@ -23,9 +21,9 @@
 
 
         .logo__link {
-            display     : @flex;
-         
-            align-items : baseline;
+            display: @flex;
+
+            align-items: baseline;
 
             .logo {
                 .hero-base-font(21px, 900);
@@ -45,30 +43,31 @@
                 opacity       : .5;
                 font-style    : @font-style;
                 letter-spacing: @letter-spacing;
-              
+
             }
         }
     }
 }
 
+
 .nav {
-    width          : 100%;
-    .flex(@cont:flex-end);
-    align-items    : center;
+    width       : 100%;
+    .flex(@cont : flex-end);
+    align-items : center;
 
     .nav__item {
         text-decoration: @link-decoration;
         .hero-base-font();
-        font-family: @brand-font-family;
+        font-family : @brand-font-family;
         padding-left: 1.8rem;
 
         &:hover {
             color     : @brand-color;
             transition: @transition;
         }
-        
+
     }
-    
+
 }
 
 .point {
@@ -89,7 +88,7 @@
     .main__subtitle {
         .hero-base-font(@subtitle-ft-size);
         font-family: @brand-font-family;
-        opacity: .9;
+        opacity    : .9;
     }
 
     .creative {
@@ -109,13 +108,13 @@
     .main__slogan {
         .hero-base-font(18px);
         font-family: @brand-font-family;
-        opacity: .9;
+        opacity    : .9;
     }
 
     .networks__icons {
         .width-margin(10rem);
         .flex;
-        margin-top     : 8rem;
+        margin-top: 8rem;
 
         .net__item {
             .networks-icons();
