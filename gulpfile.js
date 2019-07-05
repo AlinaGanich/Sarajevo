@@ -23,6 +23,7 @@ const lessFiles = [
     './src/less/_feature.less',
     './src/less/_thirdPart.less',
     './src/less/_fourthPart.less',
+    './src/less/_fifthPart.less',
     './src/less/media.less'
 ]
 

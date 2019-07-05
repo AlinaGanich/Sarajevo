@@ -33,20 +33,26 @@
         flex-wrap: wrap;
         .gallery__img {
             display: block;
+            height: 222.5px;
+          
         }
     }
 }
 .gallery__item{
     position: relative;
+   
+    width: 100%;
+    max-width: 293.3px;
+    &:hover{
+        background: @brand-color;
+    }
 }
 .gallery__info{
     .info-img();
     .txt-center();
-}
-.gallery__photo {
-    background: @brand-color;
     
 }
+
 .gallery__item:hover .gallery__img{
     opacity: .1;
     transition: @transition;
