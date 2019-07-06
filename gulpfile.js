@@ -25,6 +25,7 @@ const lessFiles = [
     './src/less/_fourthPart.less',
     './src/less/_fifthPart.less',
     './src/less/_sixthPart.less',
+    './src/less/_footer.less',
     './src/less/media.less'
 ]
 
