@@ -41,6 +41,7 @@ sans-serif;
 @hover-ft-title: #22ba9c;
 @hover-bg-icons: #2cbda1;
 @max-width     : 1908px;
+@cust-color: #5f707c;
 
 .upp(){
     text-transform: uppercase;
@@ -52,6 +53,10 @@ sans-serif;
 .icons-ft (@ft-size: 30px, @color: #c1c0c1) {
     font-size: @ft-size;
     color    : @color;
+    &:hover{
+        color     : @cont-color;
+        transition: @transition;
+    }
 }
 
 .hero-base-font(@ft-size: 14px, @ft-weight: 400, @color: @logo-color) {
@@ -176,12 +181,12 @@ sans-serif;
     }
 }
 
-.soc-icons(@padding: .56rem) {
+.soc-icons(@padding: .56rem, @color:@logo-color) {
     padding   : @padding;
     display   : inline-block;
     width     : 36px;
     height    : 35px;
-    color     : #ffffff;
+    color     : @color;
     background: #000000;
     opacity   : .3;
 
@@ -219,6 +224,15 @@ sans-serif;
         .psevdo-hr();
     }
 
+}
+
+.cust-input(@width: 24.5rem){
+    text-decoration: none;
+    border: none;
+    border-bottom: 1px solid @hr-color;
+    .cont-base-ft(12px, @cust-color);
+    height: 2.6rem;
+    width: @width;
 }
 
 /*
