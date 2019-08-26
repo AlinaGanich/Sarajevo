@@ -1,0 +1,41 @@
+.footer {
+    background-color: rgba(43, 43, 43, 1);
+    color: #fff;
+    height: 32vh;
+    font-family: $ft-family-title;
+    font-size: 14px;
+    line-height: 2;
+}
+
+.hero__text {
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+.footer__title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.footer__input {
+    text-align: end;
+    font-size: 16px;
+    text-decoration: none;
+    border: 2px solid #fff;
+    background: transparent;
+    width: 20rem;
+    height: 2.3rem;
+    border-radius: .2rem;
+    color: #fff;
+    font-size: 16px;
+    padding-right: .5rem;
+    margin-bottom: 1rem;
+}
+
+.footer__company__text,
+.footer__subs__text {
+    font-weight: 400;
+}

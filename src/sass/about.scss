@@ -1,0 +1,39 @@
+    .header-content {
+        background: linear-gradient(to bottom, white 0%, transparent 100%), url("/src/img/Slice_3.png") center no-repeat;
+        background-size: cover;
+        height: 50vh;
+    }
+    
+    .banner-header {
+        text-align: center;
+        margin-top: 3rem;
+    }
+    
+    .banner-title {
+        font-family: $ft-family-title;
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 48px;
+        text-transform: uppercase;
+        color: #544f5f;
+    }
+    
+    .banner-subtitle {
+        font-family: $ft-family-title;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        max-width: 30rem;
+        margin: 1rem auto;
+        text-transform: uppercase;
+        color: $section-title-ft-color;
+    }
+    
+    .subtitle-bold {
+        line-height: 1.5;
+        font-family: $ft-family-title;
+        font-size: 14px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: $section-title-ft-color;
+    }
