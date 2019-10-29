@@ -7,7 +7,7 @@ const uglify = require('gulp-uglify');
 const del = require('del');
 const browserSync = require('browser-sync').create();
 const sourcemaps = require('gulp-sourcemaps');
-const sass = require('gulp-sass');
+const less = require('gulp-less');
 
 
 /*
@@ -16,9 +16,17 @@ const cssFiles = [
     './src/css/media.css'
 ]
 */
-const sassFiles = [
-    './src/sass/main.scss'
-
+const lessFiles = [
+    './src/less/main.less',
+    './src/less/_variables.less',
+    './src/less/_banner.less',
+    './src/less/_feature.less',
+    './src/less/_thirdPart.less',
+    './src/less/_fourthPart.less',
+    './src/less/_fifthPart.less',
+    './src/less/_sixthPart.less',
+    './src/less/_footer.less',
+    './src/less/media.less'
 ]
 
 const jsFiles = [
@@ -27,9 +35,9 @@ const jsFiles = [
     ]
     //Таск на стили less
 function styles() {
-    return gulp.src(sassFiles)
+    return gulp.src(lessFiles)
         .pipe(sourcemaps.init())
-        .pipe(sass())
+        .pipe(less())
         .pipe(concat('style.css'))
 
     .pipe(autoprefixer({
@@ -48,7 +56,7 @@ function styles() {
 function scripts() {
     return gulp.src(jsFiles)
         .pipe(concat('script.js'))
-        // .pipe(uglify())
+        .pipe(uglify())
         .pipe(gulp.dest('./build/js'))
         .pipe(browserSync.stream());
 
@@ -65,9 +73,8 @@ function watch() {
         }
     });
 
-    //  gulp.watch('./src/css/**/*.css', styles)
-    gulp.watch('./src/sass/**/*.scss', styles)
-    gulp.watch('./src/sass/**/*.sass', styles)
+    // gulp.watch('./src/css/**/*.css', styles)
+    gulp.watch('./src/less/**/*.less', styles)
     gulp.watch('./src/js/**/*.js', scripts)
     gulp.watch("./*.html").on('change', browserSync.reload);
 }
